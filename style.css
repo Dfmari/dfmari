@@ -7,16 +7,32 @@
     font-display: swap; 
 }
 
-/* --- CSS Variables for Hacker Aesthetic --- */
+/* --- Nord Color Palette --- */
 :root {
-    --bg-color: #0d1117;
-    --text-color: #c9d1d9;
-    --accent-color: #58a6ff;
-    --accent-hover: #79c0ff;
-    --border-color: #30363d;
-    --secondary-bg: #161b22;
+    --nord-0: #2E3440;
+    --nord-1: #3B4252;
+    --nord-2: #434C5E;
+    --nord-3: #4C566A;
+    --nord-4: #D8DEE9;
+    --nord-5: #E5E9F0;
+    --nord-6: #ECEFF4;
+    --nord-7: #8FBCBB; 
+    --nord-8: #88C0D0; /* Cyan - Main Accent */
+    --nord-9: #81A1C1; 
+    --nord-10: #5E81AC;
+    --nord-11: #BF616A;
+    --nord-14: #A3BE8C; /* Green */
+
+    /* Assignments */
+    --bg-color: var(--nord-0);
+    --secondary-bg: var(--nord-1);
+    --text-color: var(--nord-4);
+    --accent-color: var(--nord-8);
+    --accent-hover: var(--nord-7);
+    --border-color: var(--nord-2);
+    --muted-color: var(--nord-3);
+    
     --font-mono: 'BigBlueTerm', 'VT323', 'Courier New', monospace;
-    --font-sans: 'BigBlueTerm', 'VT323', 'Courier New', monospace;
 }
 
 /* --- Global Reset & Base --- */
@@ -29,24 +45,36 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: var(--font-sans);
+    font-family: var(--font-mono);
     line-height: 1.6;
-    font-size: 14px; 
-
+    font-size: 14px;
     -webkit-font-smoothing: none;
     font-smooth: never;
     text-rendering: optimizeSpeed;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Background Canvas --- */
+#neural-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send to back */
+    opacity: 0.6; /* Subtle effect */
+    pointer-events: none;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* --- Typography & Headings --- */
+/* --- Typography --- */
 h1, h2, h3 {
-    font-family: var(--font-mono);
     font-weight: normal;
     margin-bottom: 1rem;
 }
@@ -61,6 +89,7 @@ h2 {
     border-bottom: 1px dashed var(--border-color);
     padding-bottom: 0.5rem;
     margin-top: 2.5rem;
+    color: var(--nord-9);
 }
 
 p {
@@ -68,7 +97,8 @@ p {
 }
 
 strong {
-    color: #ffffff;
+    color: var(--nord-6);
+    font-weight: normal;
 }
 
 a {
@@ -84,10 +114,12 @@ a:hover {
 
 /* --- Header Section --- */
 header {
-    background-color: var(--secondary-bg);
+    /* Slight transparency to show particles behind header */
+    background-color: rgba(59, 66, 82, 0.9); 
     border-bottom: 1px solid var(--border-color);
     padding: 2rem 0;
     margin-bottom: 2rem;
+    backdrop-filter: blur(5px);
 }
 
 .header-flex {
@@ -99,24 +131,72 @@ header {
 }
 
 .subtitle {
-    color: #8b949e;
+    color: var(--nord-4);
     font-size: 1rem;
     margin-bottom: 0;
+    opacity: 0.8;
 }
 
 .links {
     display: flex;
     gap: 1rem;
+    text-align: center;
 }
 
-/* --- CTF Achievements Timeline --- */
+/* --- Improved Skills Terminal Code Block --- */
+.code-block {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.cmd-group {
+    display: block;
+    color: var(--nord-8); /* Cyan headers */
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+.cmd-group:first-child {
+    margin-top: 0;
+}
+
+.cmd-line {
+    display: block;
+    padding-left: 0.5rem;
+    color: var(--nord-4);
+}
+
+.prompt {
+    color: var(--nord-14); /* Green prompt */
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background-color: var(--nord-4);
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* --- Timeline (Achievements) --- */
 .achievement-list {
     list-style: none;
     border-left: 2px solid var(--border-color);
     padding-left: 1.5rem;
     margin-left: 0.5rem;
     margin-bottom: 2rem;
-    margin-top: 1rem;
 }
 
 .achievement-list li {
@@ -124,7 +204,6 @@ header {
     position: relative;
 }
 
-/* The dot on the timeline */
 .achievement-list li::before {
     content: "";
     position: absolute;
@@ -139,35 +218,33 @@ header {
 .achievement-date {
     display: block;
     font-size: 0.9rem;
-    color: #8b949e;
+    color: var(--nord-9);
     margin-bottom: 0.2rem;
 }
 
 .achievement-title {
     display: block;
     font-size: 1.15rem;
-    color: #ffffff;
+    color: var(--nord-6);
     margin-bottom: 0.2rem;
+    font-weight: bold;
 }
 
-.achievement-desc {
-    font-size: 1rem;
-    color: #8b949e;
-    margin-bottom: 0;
-}
-
-/* --- Reusable Cards (For Projects & Writeups) --- */
+/* --- Cards (Projects & Writeups) --- */
 .card-list {
     list-style: none;
-    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 .card-list li {
     background-color: var(--secondary-bg);
     border: 1px solid var(--border-color);
     padding: 1.2rem;
-    margin-bottom: 1rem;
     transition: transform 0.2s, border-color 0.2s;
+    position: relative;
+    border-radius: 4px;
 }
 
 .card-list li:hover {
@@ -178,34 +255,35 @@ header {
 .card-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0.5rem;
 }
 
-.date {
-    display: block;
-    font-size: 0.9rem;
-    color: #8b949e;
-    margin-bottom: 0.3rem;
-}
-
 .card-title {
-    display: inline-block;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .tag {
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
+    background-color: var(--nord-2);
     padding: 0.2rem 0.6rem;
-    font-size: 0.85rem;
-    color: var(--accent-hover);
+    font-size: 0.8rem;
+    color: var(--nord-6);
+    border-radius: 2px;
 }
 
 .card-desc {
     font-size: 1rem;
     margin-bottom: 0;
-    color: #8b949e;
+    color: var(--nord-4);
+    opacity: 0.9;
+}
+
+.date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--nord-9);
+    margin-bottom: 0.3rem;
 }
 
 /* --- Footer --- */
@@ -215,5 +293,46 @@ footer {
     text-align: center;
     border-top: 1px dashed var(--border-color);
     font-size: 0.9rem;
-    color: #8b949e;
+    color: var(--muted-color);
+    background-color: var(--bg-color); /* Cover the canvas at the bottom */
+}
+
+/* --- Profile Picture Integration --- */
+.profile-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--nord-8); /* Cyan border */
+    box-shadow: 0 0 10px rgba(136, 192, 208, 0.2);
+    
+    /* This filter makes the sunny photo match the dark hacker aesthetic */
+    filter: grayscale(80%) contrast(1.1) brightness(0.9);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    /* Reveals original colors slightly on hover and pops out */
+    filter: grayscale(20%) contrast(1.1) brightness(1);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(136, 192, 208, 0.5);
+}
+
+/* Adjust header flex for mobile so it doesn't break */
+@media (max-width: 600px) {
+    .profile-wrapper {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    .header-flex {
+        justify-content: center;
+    }
 }

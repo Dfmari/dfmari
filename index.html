@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Open Graph tags for neat previews on Telegram/LinkedIn -->
-    <meta property="og:title" content="dfmari | Cybersecurity Portfolio">
-    <meta property="og:description" content="CTF Player, Web Security Researcher, and Reverse Engineering Enthusiast.">
-    <meta property="og:type" content="website">
-    
     <title>dfmari | Security Researcher</title>
+    <meta property="og:title" content="dfmari | Security Researcher">
+    <meta property="og:description" content="Cybersecurity Student @ KAI, CTF Player, and JIT Learner.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Background Animation Canvas -->
+    <canvas id="neural-bg"></canvas>
+
     <header>
         <div class="container header-flex">
+            <img src="profile.jpg" alt="dfmari" class="profile-pic">
             <div>
                 <h1>dfmari</h1>
-                <p class="subtitle">Cybersecurity Student @ KAI | CTF Player</p>
+                <p class="subtitle">Cybersecurity Enthusiast | Student @ KAI | CTF Player</p>
             </div>
             <nav class="links">
                 <a href="https://github.com/dfmari" target="_blank">[ GitHub ]</a>
                 <a href="https://t.me/dfmari" target="_blank">[ Telegram ]</a>
                 <a href="https://ctftime.org/user/191921" target="_blank">[ CTFtime ]</a>
             </nav>
-        </div>
+            </div>
     </header>
 
     <main class="container">
@@ -32,32 +32,79 @@
         <section id="about">
             <h2>> whoami</h2>
             <p>
-                I am a first-year Computer Science and Engineering student at KAI (Kazan), actively targeting internships in web security, forensics, and penetration testing. 
+                I am a first-year Computer Science and Engineering student at KAI (Kazan), actively targeting internships in web security, forensics, and penetration testing.
             </p>
             <p>
-                My core strength is <strong>Just-In-Time (JIT) learning</strong> and rapid OSINT. Whether it's reverse-engineering an unfamiliar protocol, parsing documentation for an unknown language on the fly, or debugging network traffic, I excel at adapting to new technologies under the time pressure of live CTF environments.
+                My core strength is <strong>Just-In-Time (JIT) learning</strong> and rapid OSINT. Whether it's reverse-engineering an unfamiliar protocol, parsing documentation for an unknown library on the fly, or debugging network traffic, I excel at adapting to new technologies under the time pressure of live CTF environments.
             </p>
         </section>
 
-        <!-- SKILLS & TOOLKIT -->
+        <!-- SKILLS & TOOLKIT (REVAMPED) -->
         <section id="skills">
-            <h2>> cat skills_and_toolkit.md</h2>
-            <p><strong>Languages:</strong> Python (Automation & Scripting), proficient in reading/adapting Javascript, Go, and shell scripts.</p>
-            <p><strong>Web & Network:</strong> Burp Suite, Nmap, Wireshark, Gobuster, SQLmap.</p>
-            <p><strong>Forensics & Memory:</strong> Volatility 3, BelkaX, strings/binwalk.</p>
-            <p><strong>Infrastructure:</strong> Linux Server Administration. (Currently deploying and managing a remote Xray/Hiddify VPN infrastructure).</p>
+            <h2>> ./display_skills.py --verbose</h2>
+            <div class="code-block">
+                <div class="cmd-output">
+                    <span class="cmd-group">[+] PROGRAMMING & SCRIPTING</span>
+                    <span class="cmd-line">    ├── <strong>Python</strong>   :: Automation, PwnTools, Requests, Numpy, Scapy</span>
+                    <span class="cmd-line">    ├── <strong>Bash/Shell</strong> :: Linux Automation, Cron jobs, Piping/Grep/Sed</span>
+                    <span class="cmd-line">    └── <strong>Reading</strong>  :: C, Go, JavaScript (Code Review & Logic Analysis)</span>
+                    
+                    <span class="cmd-group">[+] OFFENSIVE SECURITY</span>
+                    <span class="cmd-line">    ├── <strong>Web</strong>      :: Burp Suite Pro, SQLMap, Wapiti3, Nuclei</span>
+                    <span class="cmd-line">    ├── <strong>Network</strong>  :: Nmap, Wireshark, Netcat</span>
+                    <span class="cmd-line">    └── <strong>Exploit</strong>  :: Metasploit Framework, Reverse Shells, Sliver</span>
+
+                    <span class="cmd-group">[+] FORENSICS & REVERSE ENGINEERING</span>
+                    <span class="cmd-line">    ├── <strong>Memory</strong>   :: Volatility 3, BelkaX</span>
+                    <span class="cmd-line">    ├── <strong>Static</strong>   :: Strings, Binwalk, ExifTool</span>
+                    <span class="cmd-line">    └── <strong>Reverse</strong>  :: Ghidra (Basic), GDB</span>
+
+                    <span class="cmd-group">[+] INFRASTRUCTURE & VIRTUALIZATION</span>
+                    <span class="cmd-line">    ├── <strong>Linux Admin</strong> :: Systemd, IPTables/UFW, Cron, SSH Hardening</span>
+                    <span class="cmd-line">    ├── <strong>Networking</strong>  :: Multi Protocol Encrypted Tunneling, Proxy Routing</span>
+                    <span class="cmd-line">    └── <strong>Home Lab</strong>    :: Managing secure remote access for self-hosted NAS</span>
+                </div>
+                <p><span class="prompt">guest@dfmari:~$</span> <span class="cursor">_</span></p>
+            </div>
         </section>
 
-        <!-- PROJECTS SECTION (NEW) -->
+        <!-- CTF ACHIEVEMENTS (TIMELINE) -->
+        <section id="achievements">
+            <h2>> ./show_ctf_history.sh</h2>
+            <ul class="achievement-list">
+                <li>
+                    <span class="achievement-date">2024 | Tinkoff CTF (Starter League)</span>
+                    <span class="achievement-title">Top 100</span>
+                </li>
+                <li>
+                    <span class="achievement-date">2025 | Tinkoff CTF (Starter League)</span>
+                    <span class="achievement-title">Top 500 (Solo)</span>
+                </li>
+                <li>
+                    <span class="achievement-date">2025 | BelkaCTF</span>
+                    <span class="achievement-title">33rd Overall / 10th among Students</span>
+               </li>
+               <li>
+                    <span class="achievement-date">2025 | Alfa Surfing CTF (CTF League)</span>
+                    <span class="achievement-title">81st Place </span>
+                </li>
+                <li>
+                    <span class="achievement-date">2026 | srdnlenCTF</span>
+                    <span class="achievement-title">149th Place</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- PROJECTS SECTION (CARDS) -->
         <section id="projects">
-            <h2>> ls ./projects</h2>
+            <h2>> ls -la ./projects</h2>
             <ul class="card-list">
                 <li>
                     <div class="card-header">
-                        <a href="https://github.com/Dfmari/HelloNN" target="_blank" class="card-title">HelloNN</a>
+                        <a href="https://github.com/Dfmari/HelloNN/blob/main/NN(commented).py" target="_blank" class="card-title">HelloNN</a>
                         <span class="tag">Python</span>
                     </div>
-                    <p class="card-desc">Developed a foundational Neural Network entirely from scratch. Highly commented code focusing on the underlying mathematics, backpropagation, and matrix operations rather than relying on high-level ML libraries. Based on "Neural Network From Scratch in Python" by sentdex</p>
+                    <p class="card-desc">Developed a foundational Neural Network entirely from scratch. Highly commented code focusing on the underlying mathematics, backpropagation, and matrix operations. Based on the "Neural Network From Scratch in Python" by sentdex.</p>
                 </li>
                 <li>
                     <div class="card-header">
@@ -66,49 +113,12 @@
                     </div>
                     <p class="card-desc">An exploratory AI/ML repository demonstrating proficiency in Python project structuring and algorithmic logic.</p>
                 </li>
-                <li>
-                    <div class="card-header">
-                        <a href="https://github.com/Dfmari/Greyhack" target="_blank" class="card-title">Grey Hack Automation Scripts</a>
-                        <span class="tag">MiniScript</span>
-                    </div>
-                    <p class="card-desc">Custom post-exploitation, network traversal, and automation scripts written for the Grey Hack multiplayer hacking simulator. Demonstrates understanding of exploitation logic and rapid adoption of niche scripting languages.</p>
-                </li>
             </ul>
         </section>
 
-        <!-- CTF ACHIEVEMENTS (RESTORED TIMELINE) -->
-        <section id="achievements">
-            <h2>> cat ctf_deployments.md</h2>
-            <ul class="achievement-list">
-                <li>
-                    <span class="achievement-date">2025 | BelkaCTF</span>
-                    <span class="achievement-title">33rd Overall / 10th among Students</span>
-                    <p class="achievement-desc">Solidified practical skills in digital forensics and memory analysis.</p>
-                </li>
-                <li>
-                    <span class="achievement-date">2025 | Tinkoff CTF (Starter League)</span>
-                    <span class="achievement-title">Top 500 (Solo)</span>
-                    <p class="achievement-desc">Competed completely solo, successfully solving introductory web and logic challenges.</p>
-                </li>
-                <li>
-                    <span class="achievement-date">2025 | Alfa Surfing CTF</span>
-                    <span class="achievement-title">81st Place (CTF League)</span>
-                </li>
-                <li>
-                    <span class="achievement-date">2026 | srdnlenCTF</span>
-                    <span class="achievement-title">149th Place</span>
-                    <p class="achievement-desc">See writeups below for detailed challenge breakdowns.</p>
-                </li>
-                <li>
-                    <span class="achievement-date">2024 | Tinkoff CTF (Starter League)</span>
-                    <span class="achievement-title">Top 100</span>
-                </li>
-            </ul>
-        </section>
-
-        <!-- WRITEUPS SECTION -->
+        <!-- WRITEUPS SECTION (CARDS) -->
         <section id="writeups">
-            <h2>> ls ./recent_writeups</h2>
+            <h2>> ls -la ./writeups</h2>
             <ul class="card-list">
                 <li>
                     <span class="date">Feb 2026 | srdnlenCTF</span>
@@ -123,8 +133,94 @@
 
     <footer>
         <div class="container">
-            <p>EOF. Handcrafted with vanilla HTML & CSS.</p>
+            <p>EOF. Built by hand, for fun.</p>
         </div>
     </footer>
+
+    <!-- Background Animation Script -->
+    <script>
+        const canvas = document.getElementById('neural-bg');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+
+        // Configuration
+        const particleCount = 60; // Number of nodes
+        const connectionDistance = 150; // Distance to connect nodes
+        const moveSpeed = 0.5; // Speed of movement
+
+        // Nord Colors
+        const nodeColor = 'rgba(136, 192, 208, 0.5)'; // Nord Cyan (#88C0D0)
+        const lineColor = 'rgba(76, 86, 106, 0.3)';   // Nord Grey (#4C566A)
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * moveSpeed;
+                this.vy = (Math.random() - 0.5) * moveSpeed;
+                this.size = Math.random() * 2 + 1;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Bounce off edges
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.fillStyle = nodeColor;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+
+                // Draw connections
+                for (let j = i; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < connectionDistance) {
+                        ctx.strokeStyle = lineColor;
+                        ctx.lineWidth = 1 - distance / connectionDistance;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+        init();
+        animate();
+    </script>
 </body>
 </html>
