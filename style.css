@@ -1,0 +1,146 @@
+/* --- CSS Variables for GitHub Dark / Hacker Aesthetic --- */
+:root {
+    --bg-color: #0d1117;
+    --text-color: #c9d1d9;
+    --accent-color: #58a6ff;
+    --accent-hover: #79c0ff;
+    --border-color: #30363d;
+    --secondary-bg: #161b22;
+    --font-mono: "Fira Code", "Consolas", "Courier New", monospace;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* --- Global Reset & Base --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Typography & Headings --- */
+h1, h2, h3 {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+h2 {
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* --- Header Section --- */
+header {
+    background-color: var(--secondary-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.subtitle {
+    color: #8b949e;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    font-family: var(--font-mono);
+}
+
+/* --- Writeups Section --- */
+.writeup-list {
+    list-style: none;
+}
+
+.writeup-list li {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.writeup-list li:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.date {
+    display: block;
+    font-size: 0.85rem;
+    color: #8b949e;
+    font-family: var(--font-mono);
+    margin-bottom: 0.3rem;
+}
+
+.writeup-title {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.writeup-desc {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    color: #8b949e;
+}
+
+/* --- Footer --- */
+footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: #8b949e;
+}
