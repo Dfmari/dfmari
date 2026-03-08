@@ -3,7 +3,7 @@
 # `user@dfmari:~$` whoami
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fdfmari.github.io%2Fdfmari%2F&up_message=Online&down_message=Offline&style=for-the-badge&logo=github&color=88C0D0)](https://dfmari.github.io/dfmari/)
-[![Status](https://img.shields.io/badge/Status-Seeking%20Internships-success?style=for-the-badge&logo=target&color=BF616A)](https://www.linkedin.com/)
+![Status](https://img.shields.io/badge/Status-Seeking%20Internships-success?style=for-the-badge&logo=target&color=BF616A)
 [![Telegram](https://img.shields.io/badge/Telegram-@dfmari-blue?style=for-the-badge&logo=telegram&color=5E81AC)](https://t.me/dfmari)
 
 <p align="center">
