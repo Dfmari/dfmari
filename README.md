@@ -21,15 +21,15 @@
 
 ---
 
-### 📡 Mission Profile
+### About me
 
 I am a cybersecurity student specializing in offensive security and infrastructure hardening. My GitHub serves as a repository for my research, CTF writeups, and security tools.
 
-- 🔭 **Currently working on:** A custom C2 Framework in Golang (Adversary Emulation).
-- 🚩 **CTF Focus:** Web Exploitation, Forensics, and OSINT.
-- 🎓 **Education:** Computer Science & Engineering @ KAI (Kazan).
+- **Currently working on:** A custom C2 Framework in Golang (Adversary Emulation).
+- **CTF Focus:** Web Exploitation, Forensics, and OSINT.
+- **Education:** Computer Science & Engineering @ KAI (Kazan).
 
-### 🛠️ Arsenal & Tech Stack
+### Skills and Tools
 
 | Domain | Tools & Technologies |
 | :--- | :--- |
@@ -40,12 +40,10 @@ I am a cybersecurity student specializing in offensive security and infrastructu
 
 ---
 
-### 📂 Repository Structure
+### Repository Structure
 
 This repository acts as the source for my personal portfolio site.
 
-*   **`dfmari/`**: Production source code for the landing page.
-*   **`writeups/`**: Detailed CTF solutions and research notes.
 *   **`main`**: Production branch.
 *   **`dev`**: Active development and local testing.
 
