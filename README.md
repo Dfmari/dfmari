@@ -35,7 +35,7 @@ I am a cybersecurity student specializing in offensive security and infrastructu
 | :--- | :--- |
 | **Offensive** | Python (Scapy, PwnTools), Burp Suite, Metasploit, Sliver C2 |
 | **Infrastructure** | Linux (Arch/Debian), Docker, Nginx, IPTables, WireGuard/ShadowTLS |
-| **Development** | Python, Bash, C++, HTML5/CSS3 (Nord Theme) |
+| **Development** | Python, Bash, Golang|
 | **Analysis** | Ghidra, Wireshark, Volatility 3, GDB |
 
 ---
