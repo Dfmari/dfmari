@@ -1,97 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dfmari | Security</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dfmari | Security Researcher</title>
+  <meta property="og:title" content="dfmari | Security Researcher">
+  <meta property="og:description" content="Cybersecurity Student @ KAI, CTF Player, and JIT Learner.">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <canvas id="neural-bg"></canvas>
+  <!-- Background Animation Canvas -->
+  <canvas id="neural-bg"></canvas>
 
-    <div class="top-bar">
-        <span class="status-node">SYSTEM: ONLINE</span>
-        <span class="location">KAZAN // KAI</span>
+  <header>
+    <div class="container header-flex">
+      <img src="profile.jpg" alt="dfmari" class="profile-pic">
+      <div>
+        <h1>dfmari</h1>
+        <p class="subtitle">Cybersecurity Enthusiast | Student @ KAI | CTF Player</p>
+      </div>
+      <nav class="links">
+        <a href="https://github.com/dfmari" target="_blank">[ GitHub ]</a>
+        <a href="https://t.me/dfmari" target="_blank">[ Telegram ]</a>
+        <a href="https://ctftime.org/user/191921" target="_blank">[ CTFtime ]</a>
+      </nav>
     </div>
+  </header>
 
-    <header class="container">
-        <div class="profile-hero">
-            <img src="profile.jpg" alt="dfmari" class="profile-pic">
-            <div class="hero-text">
-                <h1>dfmari</h1>
-                <p class="glitch-text" data-text="Security Researcher & CTF Player">Security Researcher & CTF Player</p>
-                <nav class="social-links">
-                    <a href="https://github.com/dfmari" target="_blank">[gh]</a>
-                    <a href="https://t.me/dfmari" target="_blank">[tg]</a>
-                    <a href="https://ctftime.org/user/191921" target="_blank">[ctf]</a>
-                </nav>
-            </div>
+  <main class="container">
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>> whoami</h2>
+      <p>
+        I am a first-year Computer Science and Engineering student at KAI (Kazan), actively studying web security,
+        forensics, and penetration testing.
+      </p>
+      <p>
+        My core strength is <strong>Just-In-Time (JIT) learning</strong> and rapid OSINT. Whether it's
+        reverse-engineering an unfamiliar protocol, parsing documentation for an unknown library on the fly, or
+        debugging network traffic, I excel at adapting to new technologies under the time pressure of live CTF
+        environments.
+      </p>
+    </section>
+
+    <!-- SKILLS & TOOLKIT  -->
+    <section id="skills">
+      <h2>> ./display_skills.py --verbose</h2>
+      <div class="code-block">
+        <div class="cmd-output">
+          <span class="cmd-group">[+] PROGRAMMING & SCRIPTING</span>
+          <span class="cmd-line"> ├── <strong>Python</strong> :: Automation, PwnTools, Requests, Numpy, Scapy</span>
+          <span class="cmd-line"> ├── <strong>Bash/Shell</strong> :: Linux Automation, Cron jobs, Piping/Grep/Sed</span>
+
+          <span class="cmd-group">[+] OFFENSIVE SECURITY</span>
+          <span class="cmd-line"> ├── <strong>Web</strong> :: Burp Suite, SQLMap, Wapiti3, Nuclei</span>
+          <span class="cmd-line"> ├── <strong>Network</strong> :: Nmap, Wireshark, Netcat</span>
+          <span class="cmd-line"> └── <strong>Exploit</strong> :: Metasploit Framework, Reverse Shells, Sliver</span>
+
+          <span class="cmd-group">[+] FORENSICS & REVERSE ENGINEERING</span>
+          <span class="cmd-line"> ├── <strong>Memory</strong> :: Volatility 3, BelkaX</span>
+          <span class="cmd-line"> ├── <strong>Static</strong> :: Strings, Binwalk, ExifTool</span>
+          <span class="cmd-line"> └── <strong>Reverse</strong> :: Ghidra (Basic), GDB</span>
+
+          <span class="cmd-group">[+] INFRASTRUCTURE & VIRTUALIZATION</span>
+          <span class="cmd-line"> ├── <strong>Linux Admin</strong> :: Systemd, IPTables/UFW, Cron, SSH Hardening</span>
+          <span class="cmd-line"> ├── <strong>Networking</strong> :: Traffic Obfuscation (XTLS-Reality/ShadowTLS), QUIC
+            & Hysteria2, TLS Fingerprint Evasion</span>
+          <span class="cmd-line"> └── <strong>Home Lab</strong> :: Managing secure access to remote NAS</span>
         </div>
-    </header>
+        <p><span class="prompt">guest@dfmari:~$</span> <span class="cursor">_</span></p>
+      </div>
+    </section>
 
-    <main class="container">
-        <section class="bio-grid">
-            <div class="bio-entry">
-                <h3>> whoami</h3>
-                <p>First-year CS student at KAI. Specialist in <strong>JIT Learning</strong> and <strong>Network Obfuscation</strong>. I excel at weaponizing documentation and parsing protocols under pressure.</p>
-            </div>
-        </section>
+    <!-- CTF ACHIEVEMENTS (TIMELINE) -->
+    <section id="achievements">
+      <h2>> ./show_ctf_history.sh</h2>
+      <ul class="achievement-list">
+        <li>
+          <span class="achievement-date">2024 | Tinkoff CTF (Starter League)</span>
+          <span class="achievement-title">Top 100</span>
+        </li>
+        <li>
+          <span class="achievement-date">2025 | Tinkoff CTF (Starter League)</span>
+          <span class="achievement-title">Top 500 (Solo)</span>
+        </li>
+        <li>
+          <span class="achievement-date">2025 | BelkaCTF</span>
+          <span class="achievement-title">33rd Overall / 10th among Students</span>
+        </li>
+        <li>
+          <span class="achievement-date">2025 | Alfa Surfing CTF (CTF League)</span>
+          <span class="achievement-title">81st Place </span>
+        </li>
+        <li>
+          <span class="achievement-date">2026 | srdnlenCTF</span>
+          <span class="achievement-title">149th Place</span>
+        </li>
+      </ul>
+    </section>
 
-        <section class="terminal-window">
-            <div class="terminal-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="title">display_skills.py</span>
-            </div>
-            <div class="terminal-body">
-                <div class="cmd-group">
-                    <span class="label">OFFENSIVE:</span> [Web, Network, Exploit, Sliver, Metasploit]
-                </div>
-                <div class="cmd-group">
-                    <span class="label">REVERSE:</span> [Ghidra, GDB, Volatility 3, BelkaX]
-                </div>
-                <div class="cmd-group">
-                    <span class="label">INFRA:</span> [Linux Hardening, XTLS-Reality, Hysteria2, NAS]
-                </div>
-                <div class="cmd-line"><span class="prompt">guest@dfmari:~$</span><span class="cursor">_</span></div>
-            </div>
-        </section>
+    <!-- PROJECTS SECTION (CARDS) -->
+    <section id="projects">
+      <h2>> ls -la ./projects</h2>
+      <ul class="card-list">
+        <li>
+          <div class="card-header">
+            <a href="https://github.com/Dfmari/HelloNN" target="_blank" class="card-title">HelloNN[2023 Archive]</a>
+            <span class="tag">Python/Math</span>
+          </div>
+          <p class="card-desc">A neural network built entirely from scratch in 10th grade. Pure NumPy, manual
+            backpropagation, and matrix calculus without using modern ML libraries. Warning: Contains 3 AM high-school
+            code. Based on the "Neural Network From Scratch in Python" by sentdex.</p>
+        </li>
+        <li>
+          <div class="card-header">
+            <a href="https://github.com/Dfmari/Sirius.AI" target="_blank" class="card-title">Sirius.AI</a>
+            <span class="tag">Python/ML</span>
+          </div>
+          <p class="card-desc">An exploratory AI/ML repository demonstrating proficiency in Python project structuring
+            and algorithmic logic.</p>
+        </li>
+        <li>
+          <div class="card-header">
+            <a href="https://github.com/Dfmari/Go-C2" target="_blank" class="card-title">Go-C2</a>
+            <span class="tag">Python/Go/InfoSec</span>
+          </div>
+          <p class="card-desc">A WIP research project to further my understanding of common APT workflows and practice
+            GoLang</p>
+        </li>
+      </ul>
+    </section>
 
-        <section class="log-section">
-            <h3>> ctf_logs.txt</h3>
-            <div class="log-entry">
-                <span class="date">2026.02</span> <span class="event">srdnlenCTF</span> <span class="rank">149th</span>
-            </div>
-            <div class="log-entry">
-                <span class="date">2025.10</span> <span class="event">BelkaCTF</span> <span class="rank">10th (Students)</span>
-            </div>
-            <div class="log-entry">
-                <span class="date">2024.06</span> <span class="event">Tinkoff CTF</span> <span class="rank">Top 100</span>
-            </div>
-        </section>
+    <!-- WRITEUPS SECTION (CARDS) -->
+    <section id="writeups">
+      <h2>> ls -la ./writeups</h2>
+      <ul class="card-list">
+        <li>
+          <span class="date">Feb 2026 | srdnlenCTF</span>
+          <a href="../ctf_writeups/writeups/srdnlenCTF2026/web_msn_revive/solution.html" class="card-title">
+            web_msn_revive
+          </a>
+          <p class="card-desc">IDOR via Path Bypass enabled by Parser Differential</p>
+        </li>
+      </ul>
+    </section>
+  </main>
 
-        <section class="repo-grid">
-            <h3>> ls ./projects</h3>
-            <div class="project-card">
-                <div class="card-meta"><span class="tag">Go / InfoSec</span></div>
-                <h4>Go-C2</h4>
-                <p>C2 research focusing on APT workflows and Go-based implant design.</p>
-                <a href="#" class="view-link">View Source</a>
-            </div>
-            <div class="project-card">
-                <div class="card-meta"><span class="tag">Python</span></div>
-                <h4>HelloNN</h4>
-                <p>Neural Network from scratch. Pure NumPy, manual backprop.</p>
-                <a href="#" class="view-link">View Source</a>
-            </div>
-        </section>
-    </main>
+  <footer>
+    <div class="container">
+      <p>EOF. Built by hand, for fun.</p>
+    </div>
+  </footer>
 
-    <footer>
-        <p>CON_ID: 191921 // EOF</p>
-    </footer>
+  <!-- Background Animation Script -->
+  <script>
+    const canvas = document.getElementById('neural-bg');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
 
-    <script src="script.js"></script>
+    // Configuration
+    const particleCount = 60; // Number of nodes
+    const connectionDistance = 150; // Distance to connect nodes
+    const moveSpeed = 0.5; // Speed of movement
+
+    // Nord Colors
+    const nodeColor = 'rgba(136, 192, 208, 0.5)'; // Nord Cyan (#88C0D0)
+    const lineColor = 'rgba(76, 86, 106, 0.3)';   // Nord Grey (#4C566A)
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * moveSpeed;
+        this.vy = (Math.random() - 0.5) * moveSpeed;
+        this.size = Math.random() * 2 + 1;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        // Bounce off edges
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+      }
+
+      draw() {
+        ctx.fillStyle = nodeColor;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function init() {
+      particles = [];
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+
+        // Draw connections
+        for (let j = i; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < connectionDistance) {
+            ctx.strokeStyle = lineColor;
+            ctx.lineWidth = 1 - distance / connectionDistance;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+    init();
+    animate();
+  </script>
 </body>
+
 </html>
