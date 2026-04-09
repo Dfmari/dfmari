@@ -1,3 +1,12 @@
+/* --- Custom Fonts --- */
+@font-face {
+  font-family: 'BigBlueTerm';
+  src: url('fonts/BigBlueTerm.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* --- Nord Palette --- */
 :root {
   --nord-0: #2E3440;
@@ -7,10 +16,8 @@
   --nord-4: #D8DEE9;
   --nord-6: #ECEFF4;
   --nord-8: #88C0D0;
-  /* Cyan */
   --nord-9: #81A1C1;
   --nord-14: #A3BE8C;
-  /* Green */
 }
 
 /* --- Global --- */
